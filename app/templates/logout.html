@@ -1,0 +1,12 @@
+{%extends 'base.html' %}
+
+{%block title %}Sair {%endblcok %}
+
+{% block content %}
+    <h2>Sair</h2> 
+    <form method = "post" action= "{url 'accout_logout' %}"> 
+        {% csrc_token %}
+        
+        <button class = 'btn btn-sucess' type= 'submit'> Sair </button>
+    </form>
+{% endblock %}

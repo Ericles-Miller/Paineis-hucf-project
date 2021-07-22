@@ -1,0 +1,49 @@
+{% extends 'home.html'%}
+
+{% block title %}oiii HUCF{% endblock %}
+
+{% block content %}
+ <!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <title>Formulário de Login e Registro com HTML5 e CSS3</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" type="text/css" href="../static/index.css" />
+</head>
+<body>
+    <img src="{{url_for('static', filename = 'img/HUbranca.png')}}" class="img_bg" alt="bg"> 
+    <div class="mov_form">
+     <div class="content">      
+      <!--FORMULÁRIO DE LOGIN-->
+      <div id="login">
+        <form method="post" action="/"> 
+          <h1>Login</h1> 
+          <p> 
+            <label for="nome_login">Seu nome</label>
+            <input id="nome_login" name="nome_login" required="required" type="text" placeholder="ex. contato@htmlecsspro.com"/>
+          </p>
+           
+          <p> 
+            <label for="senha_cad">Sua senha</label>
+            <input id="senha_cad" name="senha_login" required="required" type="password" placeholder="1234"/>
+          </p>
+           
+          <p> 
+            <input type="checkbox" name="manterlogado" id="manterlogado" value="" /> 
+            <label for="manterlogado">Manter-me logado</label>
+          </p>
+           
+          <p> 
+            <input type="submit" value="Logar" /> 
+          </p>
+           
+          <p class="link">
+            Ainda não tem conta?
+            <a href="{{url_for('main.signup')}}">Cadastre-se</a>
+          </p>
+        </form>
+      </div>
+    </div>
+</body>
+{% endblock %}
